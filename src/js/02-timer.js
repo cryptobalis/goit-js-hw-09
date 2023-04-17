@@ -53,6 +53,9 @@ flatpickr(inputDate, {
       startButton.disabled = false;
 
       startButton.addEventListener("click", () => {
+
+        inputDate.disabled = true;
+        startButton.disabled = true;
         clearInterval(countdownIntervalId);
 
         countdownIntervalId = setInterval(() => {
